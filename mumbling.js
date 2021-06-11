@@ -8,12 +8,26 @@
 // ingat bahwa setiap huruf harus dtambah "-" sebagai penghubung
 
 let str = "saya"
-let result = str.split('').map(function(item, index){
-    let tempStr = ''
-    for (let i = 1; i <= index + 1; i++) {
-        tempStr += i == 1 ? item.toUpperCase() : item
+let result = ""
+// let result = str.split('').map(function(item, index){
+//     let tempStr = ''
+//     for (let i = 1; i <= index + 1; i++) {
+//         tempStr += i == 1 ? item.toUpperCase() : item
+//     }
+//     return tempStr
+// }).join('-');
+
+for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < i+1; j++) {
+        if(j == 0){
+            result += str[i].toUpperCase()
+        }else{
+            result += str[i]
+        }
     }
-    return tempStr
-}).join('-');
+    if(i != str.length - 1){
+        result += '-'
+    }
+}
 
 console.log(result);
