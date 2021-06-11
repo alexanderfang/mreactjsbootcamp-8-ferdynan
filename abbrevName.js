@@ -14,9 +14,14 @@
 
 // console.log(result)
 let name = "Sam Harris"
-let arr = name.replace(/\s+/g,' ').trim().split(' ').map(function(item){
-    if(item[0])
-        return item[0].toUpperCase()
-    return ''
-})
-console.log(arr.join(''))
+let result = ""
+// let arr = name.replace(/\s+/g,' ').trim().split(' ').map(function(item){
+//     if(item[0])
+//         return item[0].toUpperCase()
+//     return ''
+// })
+for (let i = 0; i < name.length; i++) {
+        if(i === 0|| name[i-1] === " " )
+            result += name[i].toUpperCase()
+}
+console.log(result)
