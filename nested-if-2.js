@@ -20,11 +20,15 @@ var money = 15000; // silahkan beri nilai
 var age = 17;// silahkan beri nilai
 var height = 150;// silahkan beri nilai
 var accompaniedByAdult = false;// silahkan beri nilai dengan boolean
+var price = 15000
+var minAge = 7
+var minHeight = 125
+var allowedAgeWithAccompany = 10
 
 // Write your code here
-if(money>= 15000){
-    if(age >= 7 && height >= 125){
-        if(age < 10 && !accompaniedByAdult){
+if(money>= price){
+    if(age >= minAge && height >= minHeight){
+        if(age < allowedAgeWithAccompany && !accompaniedByAdult){
             console.log("Kamu harus ditemani oleh orang dewasa untuk menaiki wahana ini");
         }else{
             console.log("Selamat menikmati wahana ini");
